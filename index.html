@@ -1,0 +1,63 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+        <script src="book-data.js"></script>
+        <script src="bookshelf.js"></script>
+        <script src="index.js"> </script>
+        <title>Bookshelf</title>
+    </head>
+    <body>
+        <navbar>
+            <div class="Flex" id="navbar-links">
+                <a class="active">Bookshelf</a>
+                <a href="./about.html">About</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </navbar>
+        <div class="Container">
+            <h1> Bookshelf </h1>
+            <form id="book-form">
+                <h2> Add a New Book</h2>
+                <div class="Flex u-pushBottom">
+                    <div class="InputField">
+                        <label for="book[title]">Title</label>
+                        <input id="book_title" name="book[title]"></input>
+                    </div>
+                    <div class="InputField">
+                        <label for="book[author]">Author</label>
+                        <input id="book_author" name="book[author]"></input>
+                    </div>
+                    <div class="InputField">
+                        <label for="book[language]">Language</label>
+                        <input id="book_language" name="book[language]"></input>
+                    </div>
+                    <div class="InputField">
+                        <label for="book[subjects]">Subject</label>
+                        <input id="book_subjects" name="book[subjects]"></input>
+                        <small style="color: red;">Separate subjects with a semicolon (;)</small>
+                    </div>
+                </div>
+                <!-- this is intercepted by the "submit" eventListener at the bottom of index.js -->
+                <input type="submit" class="u-pushBottom" value="Add to My Bookshelf"/>
+            </form>
+
+            <h2>My Bookshelf</h2>
+            <!-- this is populated as bookData is loaded into the Bookshelf instance's books property (an empty array to start) is populated with books -->
+        	<div id="book-info">
+            </div>
+        </div>
+    </body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
